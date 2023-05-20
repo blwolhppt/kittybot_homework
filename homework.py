@@ -82,8 +82,8 @@ def main():
                 message = parse_status(response[0])
                 send_message(bot, message)
             else:
-                logger.warning('Бот не смог отправить сообщение, так как '
-                               'ничего нового нет')
+                logger.debug('Бот не смог отправить сообщение, так как '
+                             'ничего нового нет')
         except Exception as error:
             message = f'Сбой в работе программы: {error}'
         finally:
